@@ -1,0 +1,107 @@
+# Lazygit Configuration
+# https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
+
+gui:
+  # Things like scrolling, timing, etc.
+  scrollHeight: 2
+  scrollPastBottom: true
+  skipUnstageLineWarning: true
+
+  # Window size for the commit message panel
+  commitLength:
+    show: true
+
+  # How to display the commit hash
+  showBranchCommitHash: true
+
+  # Nerd fonts version to use
+  nerdFontsVersion: "3"
+
+  # Border for each panel
+  border: single
+
+  # Show random tip on startup
+  showRandomTip: false
+
+  # Show file tree
+  showFileTree: true
+
+  # Show bottom line for each panel
+  showBottomLine: true
+
+  # Show command log
+  showCommandLog: true
+
+  # Colors
+  theme:
+    activeBorderColor:
+      - "#89b4fa"  # blue
+    inactiveBorderColor:
+      - "#45475a"  # grey
+    optionsTextColor:
+      - "#a6e3a1"  # green
+    selectedLineBgColor:
+      - "#313244"  # dark grey
+    selectedRangeBgColor:
+      - "#45475a"  # grey
+    cherryPickedCommitFgColor:
+      - "#a6e3a1"  # green
+    cherryPickedCommitBgColor:
+      - "#313244"  # dark grey
+    unstagedChangesColor:
+      - "#f38ba8"  # red
+    defaultFgColor:
+      - "#cdd6f4"  # white
+
+update:
+  method: never  # disable update checks
+
+refresher:
+  refreshInterval: 10  # seconds between refreshes
+
+confirmOnQuit: false
+
+quitOnTopLevelReturn: true
+
+keybinding:
+  universal:
+    quit: '<esc>'
+    return: '<enter>'  # needed for binding <enter> to something else
+
+os:
+  editPreset: 'nvim'
+
+# Custom commands
+customCommands:
+  - key: 'C'
+    command: 'gh pr create --title "{{index .SelectedCommit.Message 0}}" --body "{{index .SelectedCommit.Message 0}}"'
+    context: 'commitFiles'
+    description: 'Create PR from commit'
+    loadingText: 'Creating PR...'
+  - key: 'P'
+    command: 'git push --force-with-lease'
+    context: 'files'
+    description: 'Force push with lease'
+    loadingText: 'Force pushing...'
+  - key: 'f'
+    command: 'git fetch --all --prune'
+    context: 'global'
+    description: 'Fetch all remotes'
+    loadingText: 'Fetching...'
+  - key: 's'
+    command: 'git submodule update --init --recursive'
+    context: 'global'
+    description: 'Update submodules'
+    loadingText: 'Updating submodules...'
+
+# Disable features
+disableDirectCommit: false
+
+# Prompt behavior
+promptToReturnFromSubprocess: true
+
+# What to do when opening lazygit inside a subdir of a git repo
+startFromSubprocess: false
+
+# Opening the commit log panel
+openCommitLogPanel: all

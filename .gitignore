@@ -1,0 +1,40 @@
+# Secrets
+*.secrets
+.zshrc.secrets
+*.key
+*.pem
+
+# SSH keys
+id_*
+*.pub
+known_hosts
+
+# Backups
+backups/
+*.bak
+*.old
+*.backup
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Git
+*.orig
+
+# Node
+node_modules/
+package-lock.json
+
+# Environment
+.env
+.env.*
+!.env.example

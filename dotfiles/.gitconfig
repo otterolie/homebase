@@ -1,0 +1,32 @@
+[user]
+	name = Otter Olie
+	email = otterolie@gmail.com
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[rerere]
+	enabled = true
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	lg = log --oneline --graph --decorate -20
+	undo = reset HEAD~1 --mixed
+	amend = commit --amend --no-edit
+[core]
+  pager = delta
+
+[delta]
+  navigate = true
+  side-by-side = true
+
+[interactive]
+  diffFilter = delta --color-only
+
+[diff]
+  colorMoved = default
+[credential]
+	helper = osxkeychain
