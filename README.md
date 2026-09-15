@@ -1,17 +1,8 @@
 # Homebase - Personal Dotfiles & Dev Environment
 
-> **Complete development environment setup with optimizations for speed and productivity**
+> Complete development environment setup with optimizations for speed and productivity
 
-🏠 One command to feel at home on any server.
-
-## Features
-
-- **⚡ Fast Shell Startup** - Optimized zsh with lazy-loading (<200ms startup)
-- **🚀 Quick Bootstrap** - Full server setup in 15-20 minutes
-- **🎨 Consistent Theme** - Catppuccin Mocha everywhere
-- **🔧 Modern CLI Tools** - eza, bat, ripgrep, fd, zoxide, and more
-- **📦 Auto-Sync** - Git hooks keep your dotfiles in sync
-- **🔒 Secure** - Secrets management with templates
+One command to feel at home on any server.
 
 ## Quick Start
 
@@ -23,22 +14,24 @@ cd ~/homebase
 ./bootstrap.sh
 ```
 
-### Update Existing Installation
+### Server Hardening (Optional)
+
+After bootstrap, apply production server optimizations:
 
 ```bash
-cd ~/homebase
-git pull
-./bootstrap.sh
+sudo ./scripts/optimize-server.sh
 ```
+
+This configures swap, hardens SSH, optimizes network settings, and more.
 
 ## What's Included
 
 ### Dotfiles
-- **`.zshrc`** - Enhanced Zsh with lazy-loading, modern aliases
-- **`.tmux.conf`** - Tmux with Catppuccin theme & vim bindings (Ctrl+a prefix)
-- **`.gitconfig`** - Git aliases & delta integration
-- **`starship.toml`** - Beautiful, fast prompt
-- **`lazygit/config.yml`** - Lazygit with Catppuccin theme
+- `.zshrc` - Enhanced Zsh with lazy-loading, modern aliases
+- `.tmux.conf` - Tmux with Catppuccin theme & vim bindings (Ctrl+a prefix)
+- `.gitconfig` - Git aliases & delta integration
+- `starship.toml` - Fast prompt
+- `lazygit/config.yml` - Lazygit with Catppuccin theme
 
 ### Tools
 
@@ -59,9 +52,9 @@ Oh-My-Zsh + syntax-highlighting + autosuggestions
 
 ## Platform Support
 
-- ✅ macOS (Homebrew)
-- ✅ Debian 12
-- ✅ Ubuntu 22.04+
+- macOS (Homebrew)
+- Debian 12
+- Ubuntu 22.04+
 
 ## Optimizations
 

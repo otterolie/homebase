@@ -1,0 +1,1 @@
+/root/homebase/scripts/server-optimization/optimize-server.sh
